@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ms-movement
+    name: ms-transaction
 
   cloud:
     config:
