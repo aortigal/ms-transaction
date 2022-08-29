@@ -1,0 +1,19 @@
+name: workflow
+on:
+  push:
+    branches: [main]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Tarea01 actions/checkout@v1
+      uses: actions/checkout@v1
+    - name: Instalar Java 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+    - name: Mave Package
+      run: mvn -B clean package -DskipTests
+    - name: Maven Verify
+      run: mvn -B clean verify
+

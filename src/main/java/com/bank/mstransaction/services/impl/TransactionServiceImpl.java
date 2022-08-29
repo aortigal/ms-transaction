@@ -146,7 +146,7 @@ public class TransactionServiceImpl implements TransactionService {
         return dao.findAll()
                 .doOnNext(transaction -> {
                     if(transaction.getClientId().equals(idClient)) {
-                        balance.set(balance.get() + transaction.getMont());
+                        balance.set(balance.get() + transaction.getAmount());
                         log.info(transaction.toString());
                     }
                 })

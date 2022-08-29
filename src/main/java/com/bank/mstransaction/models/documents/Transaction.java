@@ -19,8 +19,8 @@ public class Transaction extends Audit
     private String clientId;
     @NotNull(message = "creditId must not be null")
     private String creditId;
-    @NotNull(message = "mont must not be null")
-    private float mont;
+    @NotNull(message = "amount must not be null")
+    private float amount;
     private String seller;
     private String ruc;
 
