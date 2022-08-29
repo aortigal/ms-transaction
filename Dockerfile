@@ -5,6 +5,6 @@ RUN mvn -B package --file /usr/src/app/pom.xml
 
 FROM openjdk:11
 EXPOSE 8086
-COPY --from=build /usr/src/app/target/ms-debitcard-0.0.1-SNAPSHOT.jar /usr/app/ms-debitcard-0.0.1-SNAPSHOT.jar
-ADD target/ms-debitcard-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java","-jar","/usr/app/ms-debitcard-0.0.1-SNAPSHOT.jar"]
+COPY --from=build /usr/src/app/target/ms-transaction-0.0.1-SNAPSHOT.jar /usr/app/ms-transaction-0.0.1-SNAPSHOT.jar
+ADD target/ms-transaction-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","/usr/app/ms-transaction-0.0.1-SNAPSHOT.jar"]
